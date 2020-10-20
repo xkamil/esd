@@ -1,0 +1,25 @@
+---
+environment: test
+serverPort: 8080
+service:
+  statusRefreshInterval: 10000
+  statusRequestTimeout: 100
+services:
+  - name: rms
+    health: http://localhost:1080/rms/healtcheck
+    meta: http://localhost:1080/rms/_meta/version
+  - name: cms
+    health: http://localhost:1080/cms/healtcheck
+    meta: http://localhost:1080/cms/_meta/version
+  - name: mms
+    health: http://localhost:1080/mms/healtcheck
+    meta: http://localhost:1080/mms/_meta/version
+  - name: client
+    health: http://localhost:1080/client/healtcheck
+    meta: http://localhost:1080/client/_meta/version
+  - name: dictionary
+    health: http://localhost:1080/mms/healtcheck
+    meta: http://localhost:1080/mms/_meta/version
+  - name: bff-api
+    health: http://localhost:1080/cms/healtcheck
+    meta: http://localhost:1080/cms/_meta/version
