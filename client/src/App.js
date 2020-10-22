@@ -1,10 +1,10 @@
 import React, {useEffect, useState} from 'react';
-import Dashboard from "./Dashboard";
+import ServicesContainer from "./ServicesContainer";
 
 const STATUS_REFRESH_RATE = 10000;
 
 function App() {
-  const [config, setConfig] = useState();
+  const [config, setConfig] = useState(null);
 
   useEffect(() => {
     getConfiguration();
@@ -20,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-      {config && <Dashboard config={config}/>}
+      {config && <ServicesContainer config={config}/>}
     </div>
   )
 }

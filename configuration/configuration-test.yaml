@@ -1,25 +1,61 @@
 ---
 environment: test
+
 serverPort: 8080
+
 service:
   statusRefreshInterval: 10000
   statusRequestTimeout: 100
+
+paths:
+  health:
+    default: /healtcheck
+  meta:
+    default: /_meta/version
+
 services:
   - name: rms
-    health: http://localhost:1080/rms/healtcheck
-    meta: http://localhost:1080/rms/_meta/version
+    url: http://localhost:1080/rms
   - name: cms
-    health: http://localhost:1080/cms/healtcheck
-    meta: http://localhost:1080/cms/_meta/version
+    url: http://localhost:1080/cms    
   - name: mms
-    health: http://localhost:1080/mms/healtcheck
-    meta: http://localhost:1080/mms/_meta/version
+    url: http://localhost:1080/mms   
   - name: client
-    health: http://localhost:1080/client/healtcheck
-    meta: http://localhost:1080/client/_meta/version
+    url: http://localhost:1080/client   
   - name: dictionary
-    health: http://localhost:1080/mms/healtcheck
-    meta: http://localhost:1080/mms/_meta/version
+    url: http://localhost:1080/mms   
   - name: bff-api
-    health: http://localhost:1080/cms/healtcheck
-    meta: http://localhost:1080/cms/_meta/version
+    url: http://localhost:1080/cms 
+  - name: cms4
+    url: http://localhost:1080/cms   
+  - name: cms2
+    url: http://localhost:1080/cms  
+  - name: fs-session-management
+    url: http://localhost:1080/cms  
+  - name: fs-filemanager
+    url: http://localhost:1080/cms
+  - name: fs-rms-onboarding
+    url: http://localhost:1080/cms  
+  - name: fs-rms-fraudprevention
+    url: http://localhost:1080/cms
+
+  - name: fs-rvention1
+    url: http://localhost:1080/cms
+
+  - name: fs-rms-fraudprevention2
+    url: http://localhost:1080/cms
+
+  - name: fs-rms-fprevention3
+    url: http://localhost:1080/cms
+
+  - name: ftion4
+    url: http://localhost:1080/cms
+
+  - name: fs-rms-frauevention5
+    url: http://localhost:1080/cms
+
+  - name: fsion6
+    url: http://localhost:1080/cms
+
+  - name: fs-rms-fprevention7
+    url: http://localhost:1080/cms
