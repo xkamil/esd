@@ -1,6 +1,5 @@
----
-environment: test
 
+environment: test
 serverPort: 8080
 
 service:
@@ -38,24 +37,17 @@ services:
     url: http://localhost:1080/cms  
   - name: fs-rms-fraudprevention
     url: http://localhost:1080/cms
-
   - name: fs-rvention1
     url: http://localhost:1080/cms
-
   - name: fs-rms-fraudprevention2
     url: http://localhost:1080/cms
-
   - name: fs-rms-fprevention3
     url: http://localhost:1080/cms
-
   - name: ftion4
     url: http://localhost:1080/cms
-
   - name: fs-rms-frauevention5
     url: http://localhost:1080/cms
-
   - name: fsion6
     url: http://localhost:1080/cms
-
   - name: fs-rms-fprevention7
     url: http://localhost:1080/cms
